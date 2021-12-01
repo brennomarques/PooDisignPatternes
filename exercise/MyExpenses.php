@@ -4,6 +4,7 @@
 
         private int $cpf;
         private array $expense;
+        private int $idade;
 
         public function __construct()
         {
