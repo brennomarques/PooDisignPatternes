@@ -1,42 +1,33 @@
 <?php
     
     class MyExpenses {
+        private string $cpf;
+        private array $despesas;
 
-        private int $cpf;
-        private array $expense;
-        private int $idade;
-
-        public function __construct()
+        public function __construct(string $cpf, array $despesas)
         {
-            
+            $this->cpf = $cpf;
+            $this->despesas = $despesas;
         }
 
-        /**
-         * Get the value of cpf
-         */ 
-        public function getCpf()
-        {
-                return $this->cpf;
+        public function getCPF(){
+            return $this->cpf;
         }
 
-        /**
-         * Set the value of cpf
-         *
-         * @return  self
-         */ 
-        public function setCpf($cpf)
-        {
-                $this->cpf = $cpf;
+        public function totalizaMes(int $mes){
+            $soma = 0;
 
-                return $this;
-        }
+            foreach($this->despesas as $despesa){
+                $mesDespesa = $despesa->getMes();
+               
+                if($mesDespesa == $mes){
+                    $soma += $despesa->getValor();
+                }
+            }
 
-        public function totalizaMes(){
+            $despesaMes = new DespesaMes($mes, $soma);
 
-        }
-
-        public function gravaInfos(){
-            
+            return $despesaMes;
         }
     }
 
