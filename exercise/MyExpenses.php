@@ -13,7 +13,7 @@
         public function getCPF(){
             return $this->cpf;
         }
-
+  
         public function totalizaMes(int $mes){
             $soma = 0;
 
@@ -29,7 +29,20 @@
 
             return $despesaMes;
         }
-    }
 
+        public function GravaInfos(DespesaMes $despesa) {
+            echo "Grava informações<br>";
+            $base = serialize($despesa);
+
+            try{
+                $file = fopen("FileDataClass.txt", "w+");
+                fwrite($file, "class " .$base.PHP_EOL);
+                fclose($file);
+
+            }catch(\Exception $error) {
+                echo "Error: ".$error->getMessage();
+            }
+        }
+    }
 
 ?>
