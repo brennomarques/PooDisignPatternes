@@ -35,7 +35,7 @@
             $base = serialize($despesa);
 
             try{
-                $file = fopen("FileDataClass.txt", "w+");
+                $file = fopen("./exercise/FileDataClass.txt", "w+");
                 fwrite($file, "class " .$base.PHP_EOL);
                 fclose($file);
 
