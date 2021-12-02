@@ -8,7 +8,7 @@
     class OperacaoBancoClass implements OperacaoBanco{
         private static $instance = null;
 
-        public function getInstance(){
+        public static function getInstance(){
             if(self::$instance == null){
                 self::$instance = new OperacaoBancoClass();
             } 

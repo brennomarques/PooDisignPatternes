@@ -1,5 +1,5 @@
 <?php   
-    class Postgres implements Database{
+    class Postgres extends Database{
         function insert(){
             echo "<br> Inserindo dados no postgres <br>";
         }
