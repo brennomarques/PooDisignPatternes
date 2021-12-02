@@ -1,5 +1,4 @@
 <?php
-    
     class MyExpenses {
         private string $cpf;
         private array $despesas;
@@ -31,14 +30,13 @@
         }
 
         public function GravaInfos(DespesaMes $despesa) {
-            echo "Grava informações<br>";
             $base = serialize($despesa);
 
             try{
-                $file = fopen("./exercise/FileDataClass.txt", "w+");
+                $file = fopen("./files/fileDataClass.txt", "w+");
                 fwrite($file, "class " .$base.PHP_EOL);
                 fclose($file);
-
+                echo "Informações gravadas com sucesso!<br>";
             }catch(\Exception $error) {
                 echo "Error: ".$error->getMessage();
             }
