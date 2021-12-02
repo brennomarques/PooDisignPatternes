@@ -1,5 +1,5 @@
 <?php
-    require_once "autoLoad.php";
+    require_once "../autoLoad.php";
 
     $despesaMes2 = new DespesaMes(1, 40.50);
     $despesaMes5 = new DespesaMes(5, 12.50);
