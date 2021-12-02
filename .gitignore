@@ -3,7 +3,7 @@
 #
 
 # Ignore file exercise-1
-/exercise-1/files/*.txt
+/exercise-1/files
 
 # Ignore file exercise-3
-/exercise-3/files/*.txt
+/exercise-3/files

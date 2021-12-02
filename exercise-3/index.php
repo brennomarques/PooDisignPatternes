@@ -16,6 +16,9 @@
         $nomeArquivo = $movimentoConta->getCPFCorretista().'.txt';
 
         try{
+            if (!is_dir("./files")) {
+                mkdir("files", 0777);
+            }
             $file = fopen("./files/".$nomeArquivo, "a+");
             fwrite($file, $base."\n \r");
             fclose($file);
