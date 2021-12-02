@@ -33,7 +33,10 @@
             $base = serialize($despesa);
 
             try{
-                $file = fopen("./files/fileDataClass.txt", "w+");
+                if (!is_dir("./files")) {
+                    mkdir("files", 0777);
+                }
+                $file = fopen("./files/backupClass.txt", "w+");
                 fwrite($file, "class " .$base.PHP_EOL);
                 fclose($file);
                 echo "Informações gravadas com sucesso!<br>";
