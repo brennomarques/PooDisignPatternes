@@ -20,9 +20,12 @@
     $telgoPlus = new TelgoPlus($mysql);
     $avianPlus = new Mongo($mongo);
 
-    echo $netflix->getName();
+    echo $disney->getName()."<br>";
     $disney->addConnection($oracle);
-    var_dump($disney);
     $disney->addConnection($postgres);
-    var_dump($disney);
+    $disney->addConnection($MariaDB);
+    $disney->addConnection($firebase);
+    $disney->addConnection($firebase);
+    $disney->addConnection($mongo);
+    $disney->addConnection($mysql);
 ?>

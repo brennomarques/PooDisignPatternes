@@ -1,5 +1,5 @@
 <?php
-    class MySQL implements Database{
+    class MySQL extends Database{
         function insert(){
             echo "<br> Inserindo dados no MySQL <br>";
         }

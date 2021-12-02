@@ -1,5 +1,5 @@
 <?php
-    class Mongo implements Database{
+    class Mongo extends Database{
         function insert(){
             echo "<br> Inserindo dados no Mongo <br>";
         }

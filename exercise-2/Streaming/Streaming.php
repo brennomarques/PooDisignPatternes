@@ -9,11 +9,11 @@
         public function addConnection(Database $database){
             if(!$this->checkConnection($database)){
                 array_push($this->bancosDados, $database);
-                echo "<br>O serviço de streaming {$this->getName()} conseguiu estabelecer uma conectar com o {$database->getName()}<br>";
+                echo "<br>{$this->getName()} conectado ao banco de dados {$database->getName()}!<br>";
                 return ;
             }
 
-            echo "<br> Conexão já existente, não é possível reconectar <br>";
+            echo "<br>Não é possível realizar a mesma conexão com o banco de dados {$database->getName()} !<br>";;
         }
 
         public function checkConnection(Database $dabase):bool{

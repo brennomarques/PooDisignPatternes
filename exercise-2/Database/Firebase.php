@@ -1,5 +1,5 @@
 <?php  
-    class Firebase implements Database{
+    class Firebase extends Database{
         function insert(){
             echo "<br> Inserindo dados no Firebase <br>";
         }

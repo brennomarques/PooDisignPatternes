@@ -38,5 +38,13 @@
 
     atualizaSaldos($correntistas,$movimentos,$operacaoBanco);
 
-    var_dump($correntistas);
+    echo "<br> Saldos atualizados <br>";
+    
+    foreach($correntistas as $correntista){
+        $cpf = $correntista->getCPFCliente();
+        $saldo = $correntista->getSaldo();
+
+        echo "<br> O novo saldo do correntista {$cpf} é R$ {$saldo} <br>";
+
+    }
 ?>

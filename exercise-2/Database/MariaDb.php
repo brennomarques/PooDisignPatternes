@@ -1,5 +1,5 @@
  <?php
-    class MariaDb implements Database{
+    class MariaDb extends Database{
         function insert(){
             echo "<br> Inserindo dados no MariaDb <br>";
         }
